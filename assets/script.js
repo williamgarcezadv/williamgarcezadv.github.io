@@ -81,7 +81,48 @@
       const msg = el.getAttribute("data-wa-message") || "";
       const url = buildWaUrl(phone, buildText(tag, msg));
 
-      // Define href como fallback
-      if (el.tagName && el.tagName.toLowerI want
-::contentReference[oaicite:0]{index=0}
+      // Define href como fallback (mesmo se o JS falhar depois, o link fica ok no HTML salvo)
+      if (el.tagName && el.tagName.toLowerCase() === "a") {
+        const href = (el.getAttribute("href") || "").trim();
+        if (!href || href === "#") el.setAttribute("href", url);
+        el.setAttribute("rel", "noopener");
+        // Se você NÃO quiser abrir em nova aba, apague a linha abaixo:
+        el.setAttribute("target", "_blank");
+      }
 
+      // Intercepta clique para sempre garantir a mensagem com tracking
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        openWa(url);
+      });
+    } catch {
+      // não quebra a página
+    }
+  });
+
+  // ---------- Formulário WhatsApp ----------
+  const form = document.querySelector("[data-wa-form]");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = form.querySelector("[name=name]")?.value?.trim() || "";
+      const city = form.querySelector("[name=city]")?.value?.trim() || "";
+      const topic = form.querySelector("[name=topic]")?.value?.trim() || "";
+      const details = form.querySelector("[name=details]")?.value?.trim() || "";
+
+      const tr = getTracking();
+
+      const text =
+        (topic ? topic.toUpperCase() + " — " : "") +
+        "Quero orientação inicial." +
+        (name ? "\nNome: " + name : "") +
+        (city ? "\nCidade: " + city : "") +
+        (details ? "\nResumo: " + details : "") +
+        (Object.keys(tr).length ? "\n\nOrigem: " + JSON.stringify(tr) : "");
+
+      const phone = form.getAttribute("data-wa-form") || WA_DEFAULT;
+      openWa(buildWaUrl(phone, text));
+    });
+  }
+})();

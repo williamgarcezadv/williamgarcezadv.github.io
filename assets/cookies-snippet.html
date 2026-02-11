@@ -1,0 +1,61 @@
+<!-- Cookie Banner (LGPD) -->
+<div id="ckBanner" class="ck-banner ck-hidden" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="ck-wrap">
+    <div class="ck-text">
+      <h4>Cookies</h4>
+      <p>
+        Usamos cookies essenciais para o funcionamento do site e, com sua permissão, cookies para medir desempenho e melhorar a experiência.
+        Você pode aceitar, recusar ou configurar.
+      </p>
+    </div>
+    <div class="ck-actions">
+      <button id="ckReject" class="ck-btn" type="button">Recusar</button>
+      <button id="ckOpen" class="ck-link" type="button">Configurar</button>
+      <button id="ckAcceptAll" class="ck-btn primary" type="button">Aceitar</button>
+    </div>
+  </div>
+</div>
+
+<div id="ckOverlay" class="ck-overlay ck-hidden" aria-hidden="true"></div>
+
+<div id="ckModal" class="ck-modal ck-hidden" role="dialog" aria-label="Configurações de cookies" aria-modal="true">
+  <div class="ck-card">
+    <h3>Configurações de cookies</h3>
+    <p>Escolha quais categorias você permite. Cookies essenciais são necessários para o site funcionar.</p>
+
+    <div class="ck-row">
+      <div>
+        <strong>Essenciais</strong>
+        <small>Necessários para funcionamento do site (sempre ativos).</small>
+      </div>
+      <div class="ck-toggle">
+        <input type="checkbox" checked disabled aria-label="Cookies essenciais (sempre ativos)">
+      </div>
+    </div>
+
+    <div class="ck-row">
+      <div>
+        <strong>Analíticos</strong>
+        <small>Ajuda a medir acesso e melhorar páginas (ex.: estatísticas).</small>
+      </div>
+      <div class="ck-toggle">
+        <input id="ckAnalytics" type="checkbox" aria-label="Permitir cookies analíticos">
+      </div>
+    </div>
+
+    <div class="ck-row">
+      <div>
+        <strong>Marketing</strong>
+        <small>Usado para campanhas e remarketing (quando aplicável).</small>
+      </div>
+      <div class="ck-toggle">
+        <input id="ckMarketing" type="checkbox" aria-label="Permitir cookies de marketing">
+      </div>
+    </div>
+
+    <div class="ck-footer">
+      <button id="ckClose" class="ck-btn" type="button">Fechar</button>
+      <button id="ckSave" class="ck-btn primary" type="button">Salvar</button>
+    </div>
+  </div>
+</div>

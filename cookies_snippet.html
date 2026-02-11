@@ -1,0 +1,86 @@
+<!-- Cookies -->
+<link rel="stylesheet" href="/assets/cookies.css"/>
+
+<div id="ckBanner" class="ck-banner ck-hidden" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="ck-row">
+    <div>
+      <p class="ck-title">Cookies e privacidade</p>
+      <p class="ck-text">
+        Usamos cookies essenciais para o funcionamento do site e, com sua autorização, cookies de
+        <strong>análise</strong> (Google Analytics) e <strong>marketing</strong> (Meta Pixel).
+        Você pode aceitar, rejeitar ou ajustar as preferências.
+        <a class="ck-link" href="#" data-open-cookies>Configurações</a>.
+      </p>
+    </div>
+
+    <div class="ck-actions">
+      <button class="ck-btn" id="ckRejectAllBanner" type="button">Rejeitar</button>
+      <button class="ck-btn" id="ckManage" type="button">Configurar</button>
+      <button class="ck-btn ck-primary" id="ckAcceptAllBanner" type="button">Aceitar todos</button>
+    </div>
+  </div>
+</div>
+
+<div id="ckOverlay" class="ck-overlay ck-hidden" aria-hidden="true"></div>
+
+<div id="ckModal" class="ck-modal ck-hidden" role="dialog" aria-modal="true" aria-label="Preferências de cookies">
+  <div class="ck-modal-head">
+    <div>
+      <h3 class="ck-modal-title">Preferências de cookies</h3>
+      <div class="ck-text" style="margin-top:6px">
+        Você pode escolher quais categorias permitir. Cookies essenciais sempre ficam ativos.
+      </div>
+    </div>
+    <button id="ckClose" class="ck-close" type="button" aria-label="Fechar">✕</button>
+  </div>
+
+  <div class="ck-modal-body">
+    <div class="ck-grid">
+      <div class="ck-item">
+        <div class="ck-item-top">
+          <h4>Essenciais</h4>
+          <div class="ck-switch">
+            <span>Ativo</span>
+            <input type="checkbox" checked disabled aria-label="Cookies essenciais ativos"/>
+          </div>
+        </div>
+        <p>Necessários para o funcionamento do site (segurança, navegação e preferências básicas).</p>
+      </div>
+
+      <div class="ck-item">
+        <div class="ck-item-top">
+          <h4>Análise (Google Analytics)</h4>
+          <div class="ck-switch">
+            <span>Permitir</span>
+            <input id="ckAnalytics" type="checkbox" aria-label="Permitir cookies de análise"/>
+          </div>
+        </div>
+        <p>Ajuda a entender como o site é utilizado (páginas, origem do tráfego e comportamento).</p>
+      </div>
+
+      <div class="ck-item">
+        <div class="ck-item-top">
+          <h4>Marketing (Meta Pixel)</h4>
+          <div class="ck-switch">
+            <span>Permitir</span>
+            <input id="ckMarketing" type="checkbox" aria-label="Permitir cookies de marketing"/>
+          </div>
+        </div>
+        <p>Usado para medir campanhas e melhorar anúncios/remarketing, somente com consentimento.</p>
+      </div>
+    </div>
+
+    <div class="ck-note">
+      Você pode alterar isso a qualquer momento clicando em “Configurações de cookies” no rodapé.
+    </div>
+  </div>
+
+  <div class="ck-modal-foot">
+    <button class="ck-btn" id="ckRejectAllModal" type="button">Rejeitar</button>
+    <button class="ck-btn" id="ckSave" type="button">Salvar preferências</button>
+    <button class="ck-btn ck-primary" id="ckAcceptAllModal" type="button">Aceitar todos</button>
+  </div>
+</div>
+
+<script src="/assets/cookies.js"></script>
+<!-- /Cookies -->

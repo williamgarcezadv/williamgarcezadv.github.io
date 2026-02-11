@@ -3,19 +3,55 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
   <title>Salário-maternidade do INSS (urbano, rural, MEI e facultativa) | William Garcez</title>
-  <meta name="description" content="Teve bebê e ficou sem renda? Veja se você pode ter direito ao salário-maternidade. Análise pelo WhatsApp."/>
+  <meta name="description" content="Teve bebê e ficou sem renda? Veja se você pode ter direito ao salário-maternidade (rural, urbana, MEI e facultativa). Análise pelo WhatsApp."/>
   <meta name="robots" content="index,follow"/>
+
+  <!-- Canonical (SEO) -->
+  <link rel="canonical" href="https://williamgarcezadv.github.io/salario-maternidade.html"/>
+
   <link rel="stylesheet" href="/assets/style.css"/>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%236ee7ff'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='4' y='4' width='56' height='56' rx='16' fill='url(%23g)'/%3E%3Cpath d='M22 38h20M26 28h12' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"/>
+
+  <!-- Ícones (suba os arquivos em /assets/) -->
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"/>
+
+  <!-- Open Graph (WhatsApp/Instagram/Facebook) -->
   <meta property="og:type" content="website"/>
   <meta property="og:locale" content="pt_BR"/>
   <meta property="og:title" content="Salário-maternidade do INSS (urbano, rural, MEI e facultativa) | William Garcez"/>
   <meta property="og:description" content="Teve bebê e ficou sem renda? Veja se você pode ter direito ao salário-maternidade. Análise pelo WhatsApp."/>
-  <meta property="og:url" content="/salario-maternidade.html"/>
+  <meta property="og:url" content="https://williamgarcezadv.github.io/salario-maternidade.html"/>
+  <meta property="og:image" content="https://williamgarcezadv.github.io/assets/og-wvg-1200x630.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image"/>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LegalService", "name": "William Veras Garcez — Advocacia", "areaServed": [{"@type": "City", "name": "São Luís"}], "address": {"@type": "PostalAddress", "streetAddress": "Rua Euclides Farias, s/n, Centro Comercial MAC Center, sala nº 01, São Luís/MA, CEP 65074-080", "addressLocality": "São Luís", "addressRegion": "MA", "addressCountry": "BR"}, "telephone": "(98) 98181-1226", "email": "william_garcez@hotmail.com", "url": "/salario-maternidade.html"}</script>
+  <meta name="twitter:image" content="https://williamgarcezadv.github.io/assets/og-wvg-1200x630.png"/>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "William Veras Garcez — Advocacia",
+    "areaServed": [{"@type": "City", "name": "São Luís"}],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Euclides Farias, s/n, Centro Comercial MAC Center, sala nº 01, São Luís/MA, CEP 65074-080",
+      "addressLocality": "São Luís",
+      "addressRegion": "MA",
+      "addressCountry": "BR"
+    },
+    "telephone": "(98) 98181-1226",
+    "email": "william_garcez@hotmail.com",
+    "url": "https://williamgarcezadv.github.io/salario-maternidade.html"
+  }
+  </script>
 </head>
+
 <body>
   <header class="topbar">
     <div class="container">
@@ -27,19 +63,39 @@
             <small>OAB/MA 13.544 • São Luís/MA</small>
           </div>
         </a>
+
         <nav class="menu" aria-label="Menu principal">
           <a href="/index.html#areas">Áreas</a>
           <a href="/index.html#servicos">Serviços</a>
           <a href="/index.html#contato">Contato</a>
-          <a class="cta" href="#" data-wa="5598981811226" data-wa-tag="ATENDIMENTO" data-wa-message="Olá, quero orientação inicial." role="button">WhatsApp</a>
+
+          <!-- WhatsApp (com fallback: se JS falhar, o link direto funciona) -->
+          <a class="cta"
+             href="https://wa.me/5598981811226?text=Ol%C3%A1%2C%20quero%20orienta%C3%A7%C3%A3o%20inicial."
+             target="_blank" rel="noopener"
+             data-wa="5598981811226"
+             data-wa-tag="ATENDIMENTO"
+             data-wa-message="Olá, quero orientação inicial."
+             role="button">
+            WhatsApp
+          </a>
         </nav>
+
         <button id="menuBtn" class="hamburger" aria-label="Abrir menu" aria-expanded="false">Menu</button>
       </div>
+
       <div id="mobileMenu" class="mobile-menu" aria-label="Menu mobile">
         <a href="/index.html#areas">Áreas</a>
         <a href="/index.html#servicos">Serviços</a>
         <a href="/index.html#contato">Contato</a>
-        <a href="#" data-wa="5598981811226" data-wa-tag="ATENDIMENTO" data-wa-message="Olá, quero orientação inicial.">WhatsApp</a>
+
+        <a href="https://wa.me/5598981811226?text=Ol%C3%A1%2C%20quero%20orienta%C3%A7%C3%A3o%20inicial."
+           target="_blank" rel="noopener"
+           data-wa="5598981811226"
+           data-wa-tag="ATENDIMENTO"
+           data-wa-message="Olá, quero orientação inicial.">
+          WhatsApp
+        </a>
       </div>
     </div>
   </header>
@@ -51,67 +107,101 @@
           <div class="card card-pad">
             <h2>Salário-maternidade: urbano, rural, MEI e facultativa</h2>
             <p>Teve bebê e não tinha carteira assinada? Dependendo do caso, você pode ter direito. A chave é organizar a prova certa.</p>
-            <div class="pills"><span class="pill">Mãe rural</span><span class="pill">Urbana sem registro</span><span class="pill">MEI/autônoma</span><span class="pill">Facultativa</span><span class="pill">INSS</span></div>
+
+            <div class="pills">
+              <span class="pill">Mãe rural</span>
+              <span class="pill">Urbana sem registro</span>
+              <span class="pill">MEI/autônoma</span>
+              <span class="pill">Facultativa</span>
+              <span class="pill">INSS</span>
+            </div>
+
             <div class="actions">
-              <a class="btn primary" href="#" data-wa="5598981811226" data-wa-tag="ATENDIMENTO" data-wa-message="Quero orientação inicial sobre: Salário-maternidade: urbano, rural, MEI e facultativa">Falar no WhatsApp</a>
+              <a class="btn primary"
+                 href="https://wa.me/5598981811226?text=SAL%C3%81RIO-MATERNIDADE%20%E2%80%94%20Quero%20orienta%C3%A7%C3%A3o%20inicial%20sobre%20sal%C3%A1rio-maternidade%20(urbano%2C%20rural%2C%20MEI%2C%20facultativa)."
+                 target="_blank" rel="noopener"
+                 data-wa="5598981811226"
+                 data-wa-tag="SALÁRIO-MATERNIDADE"
+                 data-wa-message="Quero orientação inicial sobre salário-maternidade (urbano/rural/MEI/facultativa). Tive bebê em __/__/____ e minha situação é: ____ .">
+                Falar no WhatsApp
+              </a>
+
               <a class="btn" href="/index.html#contato">Enviar resumo</a>
             </div>
-            <p class="note" style="margin-top:12px">Conteúdo informativo. Atendimento mediante análise do caso concreto e documentos.</p>
+
+            <p class="note" style="margin-top:12px">
+              Ao abrir o WhatsApp, <strong>toque em Enviar</strong> para concluir.
+              <br/>Conteúdo informativo. Atendimento mediante análise do caso concreto e documentos.
+            </p>
           </div>
+
           <div class="card card-pad">
             <div class="kpi">
               <div class="logo" style="width:42px;height:42px;border-radius:16px" aria-hidden="true"></div>
               <div>
                 <strong>Atendimento objetivo</strong>
-                <small>Checklist + orientação do próximo passo (requerimento, ação, acordo ou defesa).</small>
+                <small>Checklist + orientação do próximo passo (requerimento, recurso ou ação).</small>
               </div>
             </div>
+
             <div style="height:12px"></div>
+
             <div class="badge">
               <div>
                 <div style="font-weight:900;color:var(--text)">Contato</div>
                 <div>(98) 98181-1226 • william_garcez@hotmail.com</div>
-                <div style="margin-top:6px">Rua Euclides Farias, s/n, Centro Comercial MAC Center, sala nº 01, São Luís/MA, CEP 65074-080</div>
+                <div style="margin-top:6px">
+                  Rua Euclides Farias, s/n, Centro Comercial MAC Center, sala nº 01, São Luís/MA, CEP 65074-080
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="section" style="padding-top: 14px">
-          
-<div class="grid">
-  <div class="card card-pad span-6">
-    <h3>Para quem costuma se aplicar</h3>
-    <ul>
-      <li>Trabalhadora rural (atividade na roça)</li>
-      <li>Urbana sem registro (diarista/informal)</li>
-      <li>MEI / contribuinte individual</li>
-      <li>Contribuinte facultativa (paga por conta própria)</li>
-    </ul>
-    <div class="actions" style="margin-top:14px">
-      <a class="btn primary" href="#" data-wa="5598981811226" data-wa-tag="MÃE INSS" data-wa-message="Quero saber se tenho direito ao salário-maternidade. Tive bebê em __/__/____ e minha situação é: (rural/MEI/facultativa/informal).">Mandar “MÃE INSS”</a>
-    </div>
-  </div>
-  <div class="card card-pad span-6">
-    <h3>Checklist inicial</h3>
-    <ul>
-      <li>Certidão de nascimento (ou declaração/parto)</li>
-      <li>RG/CPF</li>
-      <li>CNIS / guias / carnês (se houver)</li>
-      <li>Documentos de atividade rural (quando for o caso)</li>
-    </ul>
-    <p class="note">A prova varia conforme o caso concreto. Se já houve negativa, envie o motivo do indeferimento.</p>
-  </div>
-  <div class="card card-pad span-12">
-    <h3>Como funciona</h3>
-    <ol style="color:var(--muted)">
-      <li>Você envia “MÃE INSS” no WhatsApp com data do parto e sua situação (rural/urbana/MEI/facultativa).</li>
-      <li>Eu retorno com o checklist exato do seu caso e o próximo passo (pedido ou recurso).</li>
-    </ol>
-  </div>
-</div>
+          <div class="grid">
+            <div class="card card-pad span-6">
+              <h3>Para quem costuma se aplicar</h3>
+              <ul>
+                <li>Trabalhadora rural (atividade na roça)</li>
+                <li>Urbana sem registro (diarista/informal)</li>
+                <li>MEI / contribuinte individual</li>
+                <li>Contribuinte facultativa (paga por conta própria)</li>
+              </ul>
 
+              <div class="actions" style="margin-top:14px">
+                <a class="btn primary"
+                   href="https://wa.me/5598981811226?text=M%C3%83E%20INSS%20%E2%80%94%20Quero%20saber%20se%20tenho%20direito%20ao%20sal%C3%A1rio-maternidade.%20Tive%20beb%C3%AA%20em%20__%2F__%2F____%20e%20minha%20situa%C3%A7%C3%A3o%20%C3%A9%3A%20(rural%2Finformal%2FMEI%2Ffacultativa)."
+                   target="_blank" rel="noopener"
+                   data-wa="5598981811226"
+                   data-wa-tag="MÃE INSS"
+                   data-wa-message="Quero saber se tenho direito ao salário-maternidade. Tive bebê em __/__/____ e minha situação é: (rural/informal/MEI/facultativa).">
+                  Mandar “MÃE INSS”
+                </a>
+              </div>
+            </div>
+
+            <div class="card card-pad span-6">
+              <h3>Checklist inicial</h3>
+              <ul>
+                <li>Certidão de nascimento (ou declaração/parto)</li>
+                <li>RG/CPF</li>
+                <li>CNIS / guias / carnês (se houver)</li>
+                <li>Documentos de atividade rural (quando for o caso)</li>
+              </ul>
+              <p class="note">A prova varia conforme o caso concreto. Se já houve negativa, envie o motivo do indeferimento.</p>
+            </div>
+
+            <div class="card card-pad span-12">
+              <h3>Como funciona</h3>
+              <ol style="color:var(--muted)">
+                <li>Você envia “MÃE INSS” no WhatsApp com data do parto e sua situação (rural/urbana/MEI/facultativa).</li>
+                <li>Eu retorno com o checklist exato do seu caso e o próximo passo (pedido, recurso ou ação).</li>
+              </ol>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
   </main>
@@ -125,6 +215,7 @@
           <div>william_garcez@hotmail.com • (98) 98181-1226</div>
           <div style="margin-top:8px">© 2026. Conteúdo informativo. Atendimento mediante análise do caso concreto e documentos.</div>
         </div>
+
         <div style="min-width:260px">
           <div style="font-weight:900;color:var(--text);margin-bottom:10px">Links</div>
           <div style="display:grid;gap:8px">
@@ -140,3 +231,4 @@
   <script src="/assets/script.js"></script>
 </body>
 </html>
+

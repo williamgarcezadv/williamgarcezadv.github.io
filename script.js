@@ -40,26 +40,28 @@
 });
 
   const form = document.querySelector("[data-wa-form]");
-  if(form){
-    form.addEventListener("submit", (e)=>{
-      e.preventDefault();
-      const name = form.querySelector("[name=name]")?.value?.trim() || "";
-      const city = form.querySelector("[name=city]")?.value?.trim() || "";
-      const topic = form.querySelector("[name=topic]")?.value?.trim() || "";
-      const details = form.querySelector("[name=details]")?.value?.trim() || "";
-      const q = getQuery();
-      const msg = [
-        topic ? (topic.toUpperCase() + " — ") : "",
-        "Quero orientação inicial.",
-        name ? ("\nNome: " + name) : "",
-        city ? ("\nCidade: " + city) : "",
-        details ? ("\nResumo: " + details) : "",
-        Object.keys(q).length ? ("\n\nOrigem: " + JSON.stringify(q)) : ""
-      ].join("");
-      const wa = form.getAttribute("data-wa-form");
-      const url = `https://wa.me/${wa}?text=${encodeMsg(msg)}`;
-      window.location.href = url;
-;
+if(form){
+  form.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    const name = form.querySelector("[name=name]")?.value?.trim() || "";
+    const city = form.querySelector("[name=city]")?.value?.trim() || "";
+    const topic = form.querySelector("[name=topic]")?.value?.trim() || "";
+    const details = form.querySelector("[name=details]")?.value?.trim() || "";
+    const q = getQuery();
+    const msg = [
+      topic ? (topic.toUpperCase() + " — ") : "",
+      "Quero orientação inicial.",
+      name ? ("\nNome: " + name) : "",
+      city ? ("\nCidade: " + city) : "",
+      details ? ("\nResumo: " + details) : "",
+      Object.keys(q).length ? ("\n\nOrigem: " + JSON.stringify(q)) : ""
+    ].join("");
+    const wa = form.getAttribute("data-wa-form");
+    const url = `https://wa.me/${wa}?text=${encodeMsg(msg)}`;
+    window.location.href = url;
+  });
+}
+
     });
   }
 })();

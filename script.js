@@ -22,19 +22,22 @@
   function encodeMsg(msg){ return encodeURIComponent(msg); }
 
   document.querySelectorAll("[data-wa]").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      const tag = btn.getAttribute("data-wa-tag");
-      const msg = btn.getAttribute("data-wa-message");
-      const q = getQuery();
-      const parts = [];
-      if(tag) parts.push(tag);
-      if(msg) parts.push(msg);
-      const qs = Object.keys(q).length ? ("\n\nOrigem: " + JSON.stringify(q)) : "";
-      const finalMsg = (parts.join(" — ") || "Olá, gostaria de atendimento.") + qs;
-      const url = `https://wa.me/${btn.getAttribute("data-wa")}?text=${encodeMsg(finalMsg)}`;
-      window.open(url, "_blank", "noopener,noreferrer");
-    });
+  btn.addEventListener("click", (e)=>{
+    e.preventDefault();
+    const tag = btn.getAttribute("data-wa-tag");
+    const msg = btn.getAttribute("data-wa-message");
+    const q = getQuery();
+    const parts = [];
+    if(tag) parts.push(tag);
+    if(msg) parts.push(msg);
+    const qs = Object.keys(q).length ? ("\n\nOrigem: " + JSON.stringify(q)) : "";
+    const finalMsg = (parts.join(" — ") || "Olá, gostaria de atendimento.") + qs;
+    const url = `https://wa.me/${btn.getAttribute("data-wa")}?text=${encodeMsg(finalMsg)}`;
+
+    // Mais confiável que popup:
+    window.location.href = url;
   });
+});
 
   const form = document.querySelector("[data-wa-form]");
   if(form){
